@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skydash Admin</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./css/framework.css">
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+<body>
+    <header class="bg-white pl-20 pr-20 pt-15 pb-15 just-btw">
+        <div class="h-left d-flex gap-120 align-c">
+            <div class="logo">
+                <img class="large-logo hide-medium" src="./images/logo.svg" alt="">
+                <img class="light-logo profile-size" src="./images/logo-mini.svg" alt="">
+            </div>
+            <div class="search grey-c d-flex align-c gap-10">
+                <i class="fa-solid fa-bars fs-18 pointer menu"></i>
+                <div class="search-box d-flex align-c gap-10 hide-medium">
+                    <i class="fa-solid fa-search fs-18"></i>
+                    <input type="text" class="border-n out-n fs-16 fw-500" placeholder="Search Now">
+                </div>
+            </div>
+        </div>
+        <div class="h-right d-flex align-c gap-15 pointer">
+            <span class="icon p-relative">
+                <i class="fa-solid fa-bell grey-c fs-18"></i>
+            </span>
+            <img class="profile-size" src="./images/faces/face28.jpg" alt="">
+            <i class="fa-solid fa-ellipsis grey-c fs-18 pointer hide-medium"></i>
+        </div>
+    </header>
+    <div class="container mt-80 pt-30 d-flex gap-30">
+        <aside class="bg-white pt-20 pl-15 pr-15 rad-6 hide-mobile">
+            <ul>
+                <li class="w-full pt-10 pb-10 pl-15 pr-15 mb-5 rad-6 trans">
+                    <a class="d-flex gap-20 aside-link-c trans" href="index.html">
+                        <i class="fa-solid fa-table-cells-large"></i>
+                        <span class="mr-40 fs-13 hide-medium">Dashboard</span>
+                    </a>
+                </li>
+                <li class="active w-full pt-10 pb-10 pl-15 pr-15 mb-5 rad-6 trans">
+                    <a class="d-flex gap-20 aside-link-c trans" href="uiElements.html">
+                        <i class="fa-solid fa-layer-group"></i>
+                        <span class="mr-40 fs-13 hide-medium">UI Elements</span>
+                        <i class="fa-solid fa-angle-left"></i>
+                    </a>
+                </li>
+                <li class="w-full pt-10 pb-10 pl-15 pr-15 mb-5 rad-6 trans">
+                    <a class="d-flex gap-20 aside-link-c trans" href="">
+                        <i class="fa-solid fa-chart-simple"></i>
+                        <span class="mr-40 fs-13 hide-medium">Chart</span>
+                        <i class="fa-solid fa-angle-left"></i>
+                    </a>
+                </li>
+                <li class="w-full pt-10 pb-10 pl-15 pr-15 mb-5 rad-6 trans">
+                    <a class="d-flex gap-20 aside-link-c trans" href="">
+                        <i class="fa-solid fa-table-cells-large"></i>
+                        <span class="mr-40 fs-13 hide-medium">Tables</span>
+                        <i class="fa-solid fa-angle-left"></i>
+                    </a>
+                </li>
+                <li class="w-full pt-10 pb-10 pl-15 pr-15 mb-5 rad-6 trans">
+                    <a class="d-flex gap-20 aside-link-c trans" href="">
+                        <i class="fa-solid fa-expand"></i>
+                        <span class="mr-40 fs-13 hide-medium">Icons</span>
+                        <i class="fa-solid fa-angle-left"></i>
+                    </a>
+                </li>
+                <li class="w-full pt-10 pb-10 pl-15 pr-15 mb-5 rad-6 trans">
+                    <a class="d-flex gap-20 aside-link-c trans" href="">
+                        <i class="fa-regular fa-user"></i>
+                        <span class="mr-40 fs-13 hide-medium">User Pages</span>
+                        <i class="fa-solid fa-angle-left"></i>
+                    </a>
+                </li>
+                <li class="w-full pt-10 pb-10 pl-15 pr-15 mb-5 rad-6 trans">
+                    <a class="d-flex gap-20 aside-link-c trans" href="">
+                        <i class="fa-solid fa-ban"></i>
+                        <span class="mr-40 fs-13 hide-medium">Error pages</span>
+                        <i class="fa-solid fa-angle-left"></i>
+                    </a>
+                </li>
+                <li class="w-full pt-10 pb-10 pl-15 pr-15 mb-5 rad-6 trans">
+                    <a class="d-flex gap-20 aside-link-c trans" href="">
+                        <i class="fa-regular fa-file-lines"></i>
+                        <span class="mr-40 fs-13 hide-medium">Documentation</span>
+                        <i class="fa-solid fa-angle-left"></i>
+                    </a>
+                </li>
+            </ul>
+        </aside>
+        <main class="flex-1 p-30">
+            <div class="forms d-flex  gap-20 mb-30">
+                <div class="default-form p-20 rad-20 flex-1 bg-white">
+                    <h2 class="fs-20 title-c mb-30">Default Form</h2>
+                    <p class="grey-c mb-30 fs-15">Basic form layout</p>
+                    <form action="">
+                        Username
+                        <p class="label mb-20">
+                            <input type="text" class="d-block mt-5 w-full pl-20 pr-20 pt-15 pb-15 rad-6 border out-n" placeholder="Username">
+                        </p>
+                        <p class="label mb-20">
+                            Email address
+                            <input type="email" class="d-block mt-5 w-full pl-20 pr-20 pt-15 pb-15 rad-6 border out-n" placeholder="Email address">
+                        </p>
+                        <p class="label mb-20">
+                            Password
+                            <input type="password" class="d-block mt-5 w-full pl-20 pr-20 pt-15 pb-15 rad-6 border out-n" placeholder="Password">
+                        </p>
+                        <p class="label mb-20">
+                            Confirm Password
+                            <input type="password" class="d-block mt-5 w-full pl-20 pr-20 pt-15 pb-15 rad-6 border out-n" placeholder="Confirm Password">
+                        </p>
+                        <p class="label mb-10 pl-30 check-box p-relative">
+                            <label for="remember-me">Remember me</label>
+                            <input type="checkbox" name="remember me" id="remember-me">
+                        </p>
+                        <div class="buttons-container d-flex align-c gap-10">
+                            <button type="submit" class="submit trans pt-15 pb-15 pl-20 pr-20 rad-10 white-c bg-violet text-c pointer border-n out-n">Submit</button>
+                            <button type="reset" class="reset trans pt-15 pb-15 pl-20 pr-20 rad-10 default-c text-c bg-grey pointer border-n out-n">Cancel</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="historic-form p-20 rad-20 flex-1 bg-white">
+                    <h2 class="fs-20 title-c mb-30">Horizontal Form</h2>
+                    <p class="grey-c mb-30 fs-15">Basic form layout</p>
+                    <form action="">
+                        Username
+                        <p class="label mb-20">
+                            <input type="text" class="d-block mt-5 w-full pl-20 pr-20 pt-15 pb-15 rad-6 border out-n" placeholder="Username">
+                        </p>
+                        <p class="label mb-20">
+                            Email address
+                            <input type="email" class="d-block mt-5 w-full pl-20 pr-20 pt-15 pb-15 rad-6 border out-n" placeholder="Email address">
+                        </p>
+                        <p class="label mb-20">
+                            Password
+                            <input type="password" class="d-block mt-5 w-full pl-20 pr-20 pt-15 pb-15 rad-6 border out-n" placeholder="Password">
+                        </p>
+                        <p class="label mb-20">
+                            Confirm Password
+                            <input type="password" class="d-block mt-5 w-full pl-20 pr-20 pt-15 pb-15 rad-6 border out-n" placeholder="Confirm Password">
+                        </p>
+                        <p class="label mb-10 pl-30 check-box p-relative">
+                            <label for="remember">Remember me</label>
+                            <input type="checkbox" name="remember" id="remember">
+                        </p>
+                        <div class="buttons-container d-flex align-c gap-10">
+                            <button type="submit" class="submit trans pt-15 pb-15 pl-20 pr-20 rad-10 white-c bg-violet text-c pointer border-n out-n">Submit</button>
+                            <button type="reset" class="reset trans pt-15 pb-15 pl-20 pr-20 rad-10 default-c text-c bg-grey pointer border-n out-n">Cancel</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="basic-form-elements mb-30 p-20 bg-white rad-20">
+                <h2 class="fs-20 title-c mb-30">Basic Form Elements</h2>
+                <p class="grey-c mb-30 fs-15">Basic form elements</p>
+                <form action="">
+                    <p class="label mb-20">
+                        Name
+                        <input type="text" class="d-block mt-5 w-full pl-20 pr-20 pt-15 pb-15 rad-6 border out-n" placeholder="Name">
+                    </p>
+                    <p class="label mb-20">
+                        Email address
+                        <input type="email" class="d-block mt-5 w-full pl-20 pr-20 pt-15 pb-15 rad-6 border out-n" placeholder="Email address">
+                    </p>
+                    <p class="label mb-20">
+                        Password
+                        <input type="password" class="d-block mt-5 w-full pl-20 pr-20 pt-15 pb-15 rad-6 border out-n" placeholder="Password">
+                    </p>
+                    <p class="label mb-20">
+                        Gender
+                        <select class="d-block w-full pl-20 pr-20 pt-15 pb-15 rad-6 border out-n mt-5 grey-c on-focus" aria-placeholder="Male">
+                            <option value="Male" name="gender">Male</option>
+                            <option value="female" name="gender">Female</option>
+                        </select>
+                    </p>
+                    <p class="label mb-20">
+                        File Uoload
+                        <span class="just-btw fw-600 pl-20 rad-6 border bg-white mt-5">
+                            <label for="upload" class="fs-14 grey-c pointer">Upload Image</label>
+                            <label for="upload" style="border-radius: 0 6px 6px 0;" class="d-block text-c white-c bg-violet fs-14 pr-20 pl-20 pt-15 pb-15 pointer">Upload</label>
+                        </span>
+                    </p>
+                    <p class="label mb-20">
+                        City
+                        <input type="text" class="d-block mt-5 w-full pl-20 pr-20 pt-15 pb-15 rad-6 border out-n" placeholder="Name">
+                    </p>
+                    <p class="label mb-20">
+                        Message
+                        <textarea class="d-block mt-5 w-full pl-20 pr-20 pt-15 pb-15 rad-6 border out-n" placeholder="Type your message"></textarea>
+                    </p>
+                    <div class="buttons-container d-flex align-c gap-10">
+                        <button type="submit" class="submit trans pt-15 pb-15 pl-20 pr-20 rad-10 white-c bg-violet text-c pointer border-n out-n">Submit</button>
+                        <button type="reset" class="reset trans pt-15 pb-15 pl-20 pr-20 rad-10 default-c text-c bg-grey pointer border-n out-n">Cancel</button>
+                    </div>
+                </form>
+            </div>
+            <div class="size-container d-flex gap-20 mb-30">
+                <div class="input-size p-20 rad-20 bg-white flex-1">
+                    <h2 class="fs-20 title-c mb-30">Input Size</h2>
+                    <p class="grey-c mb-30 fs-15">Add classes like <span class="red-c fs-14">.form-control-lg</span> and <span class="red-c fs-14">.form-control-sm</span> .</p>
+                    <p class="label mb-20">
+                        Large input
+                        <input type="text" class="form-control-lg d-block mt-5 w-full  rad-6 border out-n" placeholder="Username">
+                    </p>
+                    <p class="label mb-20">
+                        Default input
+                        <input type="text" class="d-block mt-5 w-full pl-20 pr-20 pt-15 pb-15 rad-6 border out-n" placeholder="Username">
+                    </p>
+                    <p class="label mb-20">
+                        Small input
+                        <input type="text" class="form-control-sm d-block mt-5 w-full rad-6 border out-n" placeholder="Username">
+                    </p>
+                </div>
+                <div class="select-size p-20 rad-20 bg-white flex-1">
+                    <h2 class="fs-20 title-c mb-30">Select Size</h2>
+                    <p class="grey-c mb-30 fs-15">Add classes like <span class="red-c fs-14">.form-control-lg</span> and <span class="red-c fs-14">.form-control-sm</span> .</p>
+                    <p class="label mb-20">
+                        Large Select
+                        <select class="form-control-lg d-block mt-5 w-full  rad-6 border out-n grey-c pointer">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                    </p>
+                    <p class="label mb-20">
+                        Default Select
+                        <select class="d-block mt-5 w-full pt-15 pb-15 pl-20 pr-20 rad-6 border out-n grey-c pointer">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                    </p>
+                    <p class="label mb-20">
+                        Small Select
+                        <select class="form-control-sm d-block mt-5 w-full  rad-6 border out-n grey-c pointer">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                    </p>
+                </div>
+            </div>
+            <footer class="just-btw wrap">
+                <p class="fs-14 grey-c fw-400">Copyright © 2021. Premium <a class="blue-c fw-400" href="#"> Bootstrap admin template</a> from BootstrapDash. All rights reserved.</p>
+                <p class="fs-13 default-c">Hand-crafted & made with <i class="fa-regular fa-heart red-c"></i></p>
+            </footer>
+        </main>
+    </div>
+</body>
+</html>

@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skydash Admin</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./css/framework.css">
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+<body>
+    <header class="bg-white pl-20 pr-20 pt-15 pb-15 just-btw">
+        <div class="h-left d-flex gap-120 align-c">
+            <div class="logo">
+                <img class="large-logo hide-medium" src="./images/logo.svg" alt="">
+                <img class="light-logo profile-size" src="./images/logo-mini.svg" alt="">
+            </div>
+            <div class="search grey-c d-flex align-c gap-10">
+                <i class="fa-solid fa-bars fs-18 pointer menu"></i>
+                <div class="search-box d-flex align-c gap-10 hide-medium">
+                    <i class="fa-solid fa-search fs-18"></i>
+                    <input type="text" class="border-n out-n fs-16 fw-500" placeholder="Search Now">
+                </div>
+            </div>
+        </div>
+        <div class="h-right d-flex align-c gap-15 pointer">
+            <span class="icon p-relative">
+                <i class="fa-solid fa-bell grey-c fs-18"></i>
+            </span>
+            <img class="profile-size" src="./images/faces/face28.jpg" alt="">
+            <i class="fa-solid fa-ellipsis grey-c fs-18 pointer hide-medium"></i>
+        </div>
+    </header>
+    <div class="container mt-80 pt-30 d-flex gap-30">
+        <aside class="bg-white pt-20 pl-15 pr-15 rad-6 hide-mobile">
+            <ul>
+                <li class="active w-full pt-10 pb-10 pl-15 pr-15 mb-5 rad-6 trans">
+                    <a class="d-flex gap-20 aside-link-c trans" href="index.html">
+                        <i class="fa-solid fa-table-cells-large"></i>
+                        <span class="mr-40 fs-13 hide-medium">Dashboard</span>
+                    </a>
+                </li>
+                <li class="w-full pt-10 pb-10 pl-15 pr-15 mb-5 rad-6 trans">
+                    <a class="d-flex gap-20 aside-link-c trans" href="uiElements.html">
+                        <i class="fa-solid fa-layer-group"></i>
+                        <span class="mr-40 fs-13 hide-medium">UI Elements</span>
+                        <i class="fa-solid fa-angle-left"></i>
+                    </a>
+                </li>
+                <li class="w-full pt-10 pb-10 pl-15 pr-15 mb-5 rad-6 trans">
+                    <a class="d-flex gap-20 aside-link-c trans" href="">
+                        <i class="fa-solid fa-chart-simple"></i>
+                        <span class="mr-40 fs-13 hide-medium">Chart</span>
+                        <i class="fa-solid fa-angle-left"></i>
+                    </a>
+                </li>
+                <li class="w-full pt-10 pb-10 pl-15 pr-15 mb-5 rad-6 trans">
+                    <a class="d-flex gap-20 aside-link-c trans" href="">
+                        <i class="fa-solid fa-table-cells-large"></i>
+                        <span class="mr-40 fs-13 hide-medium">Tables</span>
+                        <i class="fa-solid fa-angle-left"></i>
+                    </a>
+                </li>
+                <li class="w-full pt-10 pb-10 pl-15 pr-15 mb-5 rad-6 trans">
+                    <a class="d-flex gap-20 aside-link-c trans" href="">
+                        <i class="fa-solid fa-expand"></i>
+                        <span class="mr-40 fs-13 hide-medium">Icons</span>
+                        <i class="fa-solid fa-angle-left"></i>
+                    </a>
+                </li>
+                <li class="w-full pt-10 pb-10 pl-15 pr-15 mb-5 rad-6 trans">
+                    <a class="d-flex gap-20 aside-link-c trans" href="">
+                        <i class="fa-regular fa-user"></i>
+                        <span class="mr-40 fs-13 hide-medium">User Pages</span>
+                        <i class="fa-solid fa-angle-left"></i>
+                    </a>
+                </li>
+                <li class="w-full pt-10 pb-10 pl-15 pr-15 mb-5 rad-6 trans">
+                    <a class="d-flex gap-20 aside-link-c trans" href="">
+                        <i class="fa-solid fa-ban"></i>
+                        <span class="mr-40 fs-13 hide-medium">Error pages</span>
+                        <i class="fa-solid fa-angle-left"></i>
+                    </a>
+                </li>
+                <li class="w-full pt-10 pb-10 pl-15 pr-15 mb-5 rad-6 trans">
+                    <a class="d-flex gap-20 aside-link-c trans" href="">
+                        <i class="fa-regular fa-file-lines"></i>
+                        <span class="mr-40 fs-13 hide-medium">Documentation</span>
+                        <i class="fa-solid fa-angle-left"></i>
+                    </a>
+                </li>
+            </ul>
+        </aside>
+        <main class="flex-1 p-30">
+            <h1 class="fw-600">Welcome Aamir</h1>
+            <p class="fs-15 line16 mb-20">All systems are running smoothly! You have <span>3 unread alerts!</span></p>
+            <div class="date d-flex mb-20">
+                <p class="pt-10 pb-10 pl-20 pr-20 rad-20 default-c bg-white">
+                    Today (10 Jan 2020)
+                    <i class="fa-solid fa-angle-down ml-10 pointer"></i>
+                </p>
+            </div>
+            <div class="landing mb-20 d-flex gap-20">
+                <div class="image p-relative flex-1 rad-20">
+                    <img class="w-full rad-20" src="./images/dashboard/people.svg" alt="">
+                    <div class="info p-absolute d-flex align-c gap-20">
+                        <div class="icon d-flex gap-10 align-c">
+                            <i class="fa-regular fa-sun fs-30"></i>
+                            <span class="fs-30">31<sup>c</sup></span>
+                        </div>
+                        <div class="location">
+                            <p class="fs-25">Bangalore</p>
+                            <span class="fs-16">India</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="boxes-container flex-1">
+                    <div class="boxes d-flex gap-20 mb-20">
+                        <div class="box rad-20 p-20 bg-blue">
+                            <p class="white-c mb-20 fs-13">Today's Bookings</p>
+                            <h3 class="white-c fs-30 fw-500 mb-10">4006</h3>
+                            <p class="white-c fs-13 mb-10">10.00% (30 days)</p>
+                        </div>
+                        <div class="box rad-20 p-20 bg-violet">
+                            <p class="white-c mb-20 fs-13">Total Bookings</p>
+                            <h3 class="white-c fs-30 fw-500 mb-10">61344</h3>
+                            <p class="white-c fs-13 mb-10">22.00% (30 days)</p>
+                        </div>
+                    </div>
+                    <div class="boxes d-flex gap-20">
+                        <div class="box rad-20 p-20 bg-light-violet">
+                            <p class="white-c mb-20 fs-13">Number of Meetings</p>
+                            <h3 class="white-c fs-30 fw-500 mb-10">34040</h3>
+                            <p class="white-c fs-13 mb-10">2.00% (30 days)</p>
+                        </div>
+                        <div class="box rad-20 p-20 bg-soft-red">
+                            <p class="white-c mb-20 fs-13">Number of Clients</p>
+                            <h3 class="white-c fs-30 fw-500 mb-10">47033</h3>
+                            <p class="white-c fs-13 mb-10">0.22% (30 days)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="statistics d-flex gap-20 mb-30">
+                <div class="order-details bg-white rad-20 p-20 flex-1">
+                    <h2 class="fs-20 title-c mb-30">Order Details</h2>
+                    <p class="default-c line16 fs-15 mb-30">
+                        The total number of sessions within the date range. It is the period time a user is actively engaged with your website, page or app, etc
+                    </p>
+                    <div class="details d-flex wrap gap-30 mb-30">
+                        <div class="box">
+                            <p class="grey-c mb-10 fs-15">Order Value</p>
+                            <h3 class="fs-30 violet-c fw-700">12.3K</h3>
+                        </div>
+                        <div class="box">
+                            <p class="grey-c mb-10 fs-15">Orders</p>
+                            <h3 class="fs-30 violet-c fw-700">14</h3>
+                        </div>
+                        <div class="box">
+                            <p class="grey-c mb-10 fs-15">Users</p>
+                            <h3 class="fs-30 violet-c fw-700">71.56%</h3>
+                        </div>
+                        <div class="box">
+                            <p class="grey-c mb-10 fs-15">Downloads</p>
+                            <h3 class="fs-30 violet-c fw-700">34040</h3>
+                        </div>
+                    </div>
+                    <div class="lines">
+                        <img class="d-block w-full" src="./images/lines.jpg" alt="">
+                    </div>
+                </div>
+                <div class="sales-reports bg-white rad-20 p-20 flex-1">
+                    <h2 class="fs-20 title-c mb-30 just-btw">Sales Report
+                        <a href="" class="fs-15 strong-blue-c fw-400 trans">View all</a>
+                    </h2>
+                    <p class="default-c line16 fs-15 mb-30">
+                        The total number of sessions within the date range. It is the period time a user is actively engaged with your website, page or app, etc
+                    </p>
+                    <div class="sales">
+                        <div class="keys">
+                            <div class="key-1 d-flex align-c gap-10">
+                                <span class="d-inline-block bg-blue rad-6"></span>
+                                Offline Sales
+                            </div>
+                            <div class="key-2 d-flex align-c gap-10 mb-30">
+                                <span class="d-inline-block bg-violet rad-6"></span>
+                                Online Sales
+                            </div>
+                            <div class="stiks">
+                                <img class="d-block w-full" src="./images/sticks.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="detailed-reports bg-white p-20 rad-20 d-flex gap-20 mb-30">
+                <div class="left pr-20 flex-2">
+                    <h2 class="fs-20 title-c mb-20">Detailed Reports</h2>
+                    <span class="d-block fs-30 violet-c fw-700">$34040</span>
+                    <span class="d-block fs-20 violet-c fw-700">North America</span>
+                    <p class="default-c line16 fs-15 mb-30">
+                        The total number of sessions within the date range. It is the period time a user is actively engaged with your website, page or app, etc
+                    </p>
+                    <div class="details">
+                        <div class="box d-flex align-c gap-20 mb-20">
+                            <p class="grey-c fs-14 city-width">Illinois</p>
+                            <div class="holder bg-grey flex-1 rad-20">
+                                <span class="d-block rad-20 bg-violet" style="width: 75%"></span>
+                            </div>
+                            <p class="title-c fs-16 fw-600">713</p>
+                        </div>
+                        <div class="box d-flex align-c gap-20 mb-20">
+                            <p class="grey-c fs-14 city-width">Washington</p>
+                            <div class="holder bg-grey flex-1 rad-20">
+                                <span class="d-block rad-20 bg-yellow rad-20" style="width: 25%"></span>
+                            </div>
+                            <p class="title-c fs-16 fw-600">583</p>
+                        </div>
+                        <div class="box d-flex align-c gap-20 mb-20">
+                            <p class="grey-c fs-14 city-width">Mississipi</p>
+                            <div class="holder bg-grey flex-1 rad-20">
+                                <span class="d-block rad-20 bg-red" style="width: 95%"></span>
+                            </div>
+                            <p class="title-c fs-16 fw-600">924</p>
+                        </div>
+                        <div class="box d-flex align-c gap-20 mb-20">
+                            <p class="grey-c fs-14 city-width">California</p>
+                            <div class="holder bg-grey flex-1 rad-20">
+                                <span class="d-block rad-20 bg-blue" style="width: 60%"></span>
+                            </div>
+                            <p class="title-c fs-16 fw-600">664</p>
+                        </div>
+                        <div class="box d-flex align-c gap-20 mb-20">
+                            <p class="grey-c fs-14 city-width">Maryland</p>
+                            <div class="holder bg-grey flex-1 rad-20">
+                                <span class="d-block rad-20 bg-violet" style="width: 40%"></span>
+                            </div>
+                            <p class="title-c fs-16 fw-600">560</p>
+                        </div>
+                        <div class="box d-flex align-c gap-20 mb-20">
+                            <p class="grey-c fs-14 city-width">Alaska</p>
+                            <div class="holder bg-grey flex-1 rad-20">
+                                <span class="d-block rad-20 bg-red" style="width: 80%"></span>
+                            </div>
+                            <p class="title-c fs-16 fw-600">793</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="right pl-20 flex-1">
+                    <div class="circle rad-50 p-relative">
+                        <span class="p-absolute fs-30 fw-700 title-c">90</span>
+                    </div>
+                    <div class="keys">
+                        <div class="key-1 just-btw mb-10">
+                            <div class="bullet d-flex align-c gap-10 default-c fs-15">
+                                <span class="d-inline-block bullet-size bg-violet rad-50"></span>
+                                Offline Sales
+                            </div>
+                            <span class="default-c fs-15">495343</span>
+                        </div>
+                        <div class="key-2 just-btw mb-10">
+                            <div class="bullet d-flex align-c gap-10 default-c fs-15">
+                                <span class="d-inline-block bullet-size bg-yellow rad-50"></span>
+                                Online Sales
+                            </div>
+                            <span class="default-c fs-15">66093</span>
+                        </div>
+                        <div class="key-3 just-btw">
+                            <div class="bullet d-flex align-c gap-10 default-c fs-15">
+                                <span class="d-inline-block bullet-size bg-blue rad-50"></span>
+                                Returns
+                            </div>
+                            <span class="default-c fs-15">39836</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="top-products d-flex gap-20 mb-30">
+                <div class="products p-20 bg-white rad-20 flex-2">
+                    <h2 class="fs-20 title-c mb-30">Top Products</h2>
+                    <table class="pl-15 pr-15">
+                        <thead class="d-block w-full">
+                            <tr class="just-btw w-full mb-10">
+                                <th style="width: 30%" class="text-c flex-1">Product</th>
+                                <th style="width: 20%" class="text-c">Price</th>
+                                <th style="width: 20%" class="text-c">Date</th>
+                                <th style="width: 20%" class="text-c">Status</th>
+                            </tr>
+                        </thead>
+                        <tbody class="d-block w-full">
+                            <tr class="just-btw w-full mb-15 main-bg p-10">
+                                <td style="width: 30%" class="fs-14 default-c line16 flex-1">Search Engine Marketing</td>
+                                <td style="width: 20%" class="fs-15 fw-600 black-c text-c">$362</td>
+                                <td style="width: 20%" class="fs-14 default-c line16 text-c">21 Sep 2018</td>
+                                <td style="width: 20%" class="text-r">
+                                    <span class="white-c fs-13 bg-green rad-20 btn-p">Completed</span>
+                                </td>
+                            </tr>
+                            <tr class="just-btw w-full mb-15 p-10">
+                                <td style="width: 30%" class="fs-14 default-c line16 flex-1">Search Engine Optimization</td>
+                                <td style="width: 20%" class="fs-15 fw-600 black-c text-c">$116</td>
+                                <td style="width: 20%" class="fs-14 default-c line16 text-c">13 Jun 2018</td>
+                                <td style="width: 20%" class="text-r">
+                                    <span class="white-c fs-13 bg-green rad-20 btn-p">Completed</span>
+                                </td>
+                            </tr>
+                            <tr class="just-btw w-full mb-15 p-10 main-bg">
+                                <td style="width: 30%" class="fs-14 default-c line16 flex-1">Display Advertising</td>
+                                <td style="width: 20%" class="fs-15 fw-600 black-c text-c">$551</td>
+                                <td style="width: 20%" class="fs-14 default-c line16 text-c">28 Sep 2018</td>
+                                <td style="width: 20%" class="text-r">
+                                    <span class="black-c fs-13 bg-yellow rad-20 btn-p">Pending</span>
+                                </td>
+                            </tr>
+                            <tr class="just-btw w-full mb-15 p-10">
+                                <td style="width: 30%" class="fs-14 default-c line16 flex-1">Pay Per Click Advertising</td>
+                                <td style="width: 20%" class="fs-15 fw-600 black-c text-c">$523</td>
+                                <td style="width: 20%" class="fs-14 default-c line16 text-c">30 Jun 2018</td>
+                                <td style="width: 20%" class="text-r">
+                                    <span class="black-c fs-13 bg-yellow rad-20 btn-p">Pending</span>
+                                </td>
+                            </tr>
+                            <tr class="just-btw w-full mb-15 p-10 main-bg">
+                                <td style="width: 30%" class="fs-14 default-c line16 flex-1">E-Mail Marketing</td>
+                                <td style="width: 20%" class="fs-15 fw-600 black-c text-c">$781</td>
+                                <td style="width: 20%" class="fs-14 default-c line16 text-c">01 Nov 2018</td>
+                                <td style="width: 20%" class="text-r">
+                                    <span class="white-c fs-13 bg-red rad-20 btn-p">Cancelled</span>
+                                </td>
+                            </tr>
+                            <tr class="just-btw w-full mb-15 p-10">
+                                <td style="width: 30%" class="fs-14 default-c line16 flex-1">Referral Marketing</td>
+                                <td style="width: 20%" class="fs-15 fw-600 black-c text-c">$283</td>
+                                <td style="width: 20%" class="fs-14 default-c line16 text-c">20 Mar 2018</td>
+                                <td style="width: 20%" class="text-r">
+                                    <span class="black-c fs-13 bg-yellow rad-20 btn-p">Pending</span>
+                                </td>
+                            </tr>
+                            <tr class="just-btw w-full mb-15 p-10 main-bg">
+                                <td style="width: 30%" class="fs-14 default-c line16 flex-1">Social media marketing</td>
+                                <td style="width: 20%" class="fs-15 fw-600 black-c text-c">$897</td>
+                                <td style="width: 20%" class="fs-14 default-c line16 text-c">26 Oct 2018</td>
+                                <td style="width: 20%" class="text-r">
+                                    <span class="white-c fs-13 bg-green rad-20 btn-p ml-auto">Completed</span>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="todo p-20 bg-white rad-20 flex-1">
+                    <h2 class="fs-20 title-c mb-30">To Do Lists</h2>
+                    <div class="lists">
+                        <div class="item p-20 rad-6 just-btw border mb-10">
+                            <input class="p-absolute" type="checkbox" name="item1" id="item-1">
+                            <div class="check-box flex-1">
+                                <label for="item-1" class="pointer fs-14 pl-30 p-relative">
+                                    <span>Level up for Antony</span>
+                                </label>
+                            </div>
+                            <i class="fa-solid fa-times fs-16 grey-c pointer close trans"></i>
+                        </div>
+                        <div class="item p-20 rad-6 just-btw border mb-10">
+                            <input class="p-absolute" type="checkbox" name="item2" id="item-2" checked>
+                            <div class="check-box flex-1">
+                                <label for="item-2" class="pointer fs-14 pl-30 p-relative">
+                                    <span>Follow up of team zilla</span>
+                                </label>
+                            </div>
+                            <i class="fa-solid fa-times fs-16 grey-c pointer close trans"></i>
+                        </div>
+                        <div class="item p-20 rad-6 just-btw border mb-10">
+                            <input class="p-absolute" type="checkbox" name="item3" id="item-3">
+                            <div class="check-box flex-1">
+                                <label for="item-3" class="pointer fs-14 pl-30 p-relative">
+                                    <span>Project meeting with CEO</span>
+                                </label>
+                            </div>
+                            <i class="fa-solid fa-times fs-16 grey-c pointer close trans"></i>
+                        </div>
+                        <div class="item p-20 rad-6 just-btw border mb-10">
+                            <input class="p-absolute" type="checkbox" name="item4" id="item-4" checked>
+                            <div class="check-box flex-1" style="min-width: 300px">
+                                <label for="item-4" class="pointer fs-14 pl-30 p-relative">
+                                    <span>Duplicate a project for new customer</span>
+                                </label>
+                            </div>
+                            <i class="fa-solid fa-times fs-16 grey-c pointer close trans"></i>
+                        </div>
+                        <div class="item p-20 rad-6 just-btw border mb-10">
+                            <input class="p-absolute" type="checkbox" name="item5" id="item-5">
+                            <div class="check-box flex-1">
+                                <label for="item-5" class="pointer fs-14 pl-30 p-relative">
+                                    <span>Meeting width Urban Team</span>
+                                </label>
+                            </div>
+                            <i class="fa-solid fa-times fs-16 grey-c pointer close trans"></i>
+                        </div>
+                    </div>
+                    <div class="add-item just-btw">
+                        <input type="text" class="border-n out-n p-20" placeholder="Add New Task">
+                        <span class="c-flex rad-50 border-violet pointer bullet-size">
+                            <i class="fa-solid fa-plus violet-c fs-16"></i>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="projects mb-30 d-flex gap-20">
+                <div class="table-content p-20 rad-20 bg-white flex-1">
+                    <h2 class="fs-20 title-c mb-30">Projects</h2>
+                    <table class="d-block w-full">
+                        <thead class="d-block w-full">
+                            <tr class="just-btw pb-5 border-b w-full text-l">
+                                <th style="width: 32%">Places</th>
+                                <th style="width: 32%">Orders</th>
+                                <th style="width: 32%">Users</th>
+                            </tr>
+                        </thead>
+                        <tbody class="d-block w-full">
+                            <tr class="just-btw pb-20 pt-10  w-full text-l">
+                                <td style="width: 32%" class="default-c fs-14">Kentucky</td>
+                                <td style="width: 32%"><strong>65</strong> (2.15%)</td>
+                                <td style="width: 32%" class="grey-c fs-14">65</td>
+                            </tr>
+                            <tr class="just-btw pb-20 pt-10  w-full text-l">
+                                <td style="width: 32%" class="default-c fs-14">Ohio</td>
+                                <td style="width: 32%"><strong>54</strong> (3.25%)</td>
+                                <td style="width: 32%" class="grey-c fs-14">45</td>
+                            </tr>
+                            <tr class="just-btw pb-20 pt-10  w-full text-l">
+                                <td style="width: 32%" class="default-c fs-14">Nevada</td>
+                                <td style="width: 32%"><strong>22</strong> (2.22%)</td>
+                                <td style="width: 32%" class="grey-c fs-14">32</td>
+                            </tr>
+                            <tr class="just-btw pb-20 pt-10  w-full text-l">
+                                <td style="width: 32%" class="default-c fs-14">North Calorina</td>
+                                <td style="width: 32%"><strong>46</strong> (3.27%)</td>
+                                <td style="width: 32%" class="grey-c fs-14">45</td>
+                            </tr>
+                            <tr class="just-btw pb-20 pt-10  w-full text-l">
+                                <td style="width: 32%" class="default-c fs-14">Montana</td>
+                                <td style="width: 32%"><strong>17</strong> (1.25%)</td>
+                                <td style="width: 32%" class="grey-c fs-14">25</td>
+                            </tr>
+                            <tr class="just-btw pb-20 pt-10  w-full text-l">
+                                <td style="width: 32%" class="default-c fs-14">Nevada</td>
+                                <td style="width: 32%"><strong>52</strong> (3.11%)</td>
+                                <td style="width: 32%" class="grey-c fs-14">71</td>
+                            </tr>
+                            <tr class="just-btw pb-20 pt-10  w-full text-l">
+                                <td style="width: 32%" class="default-c fs-14">Louisiana</td>
+                                <td style="width: 32%"><strong>25</strong> (1.32%)</td>
+                                <td style="width: 32%" class="grey-c fs-14">14</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="chart flex-1">
+                    <div class="info p-20 bg-white rad-20 mb-30">
+                        <h2 class="fs-20 title-c mb-30">Charts</h2>
+                        <div class="box mb-20">
+                            <p class="default-c">Data 1</p>
+                            <div class="progress just-btw">
+                                <div style="width: 75%" class="volume chart-height bg-strong-blue rad-20"></div>
+                                <div class="default-c fs-14">5K</div>
+                            </div>
+                        </div>
+                        <div class="box mb-20">
+                            <p class="default-c">Data 2</p>
+                            <div class="progress just-btw">
+                                <div style="width: 350%" class="volume chart-height bg-strong-blue rad-20"></div>
+                                <div class="default-c fs-14">1K</div>
+                            </div>
+                        </div>
+                        <div class="box mb-20">
+                            <p class="default-c">Data 3</p>
+                            <div class="progress just-btw">
+                                <div style="width: 50%" class="volume chart-height bg-strong-blue rad-20"></div>
+                                <div class="default-c fs-14">992</div>
+                            </div>
+                        </div>
+                        <div class="box mb-20">
+                            <p class="default-c">Data 4</p>
+                            <div class="progress just-btw">
+                                <div style="width: 25%" class="volume chart-height bg-strong-blue rad-20"></div>
+                                <div class="default-c fs-14">687</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="meeting p-20 bg-violet rad-20 p-relative">
+                        <img class="p-absolute" src="./images/dashboard/shape-4.svg" alt="">
+                        <h3 class="white-c fs-18 fw-600 mb-15">Number of Meetings</h3>
+                        <p class="fw-600 fs-30 white-c mb-15">34040</p>
+                        <p class="fw-500 line16 white-c fs14 p-relative">The total number of sessions within the date range.It is calculated as the sum .</p>
+                    </div>
+                </div>
+                <div class="notifications flex-1 p-20 rad-20 bg-white">
+                    <h2 class="fs-20 title-c mb-30">Notifications</h2>
+                    <div class="notification d-flex gap-10 align-start">
+                        <img class="profile-size rad-50" src="./images/faces/face1.jpg" alt="">
+                        <div class="info">
+                            <p class="strong-blue-c fs-14 fw-400 line16 mb-5">Adam Warren</p>
+                            <p class="default-c fs-14 fw-400 line16 mb-5">Sales dashboard have been created</p>
+                            <p class="default-c fs-10 fw-400 line16">9:30 am</p>
+                        </div>
+                    </div>
+                    <div class="notification d-flex gap-10 align-start">
+                        <img class="profile-size rad-50" src="./images/faces/face2.jpg" alt="">
+                        <div class="info">
+                            <p class="strong-blue-c fs-14 fw-400 line16 mb-5">Isabella Becker</p>
+                            <p class="default-c fs-14 fw-400 line16 mb-5">You have done a great job #TW111</p>
+                            <p class="default-c fs-10 fw-400 line16">10:30 am</p>
+                        </div>
+                    </div>
+                    <div class="notification d-flex gap-10 align-start">
+                        <img class="profile-size rad-50" src="./images/faces/face3.jpg" alt="">
+                        <div class="info">
+                            <p class="strong-blue-c fs-14 fw-400 line16 mb-5">Leonard Thornton</p>
+                            <p class="default-c fs-14 fw-400 line16 mb-5">Sales dashboard have been created</p>
+                            <p class="default-c fs-10 fw-400 line16">11:30 am</p>
+                        </div>
+                    </div>
+                    <div class="notification d-flex gap-10 align-start">
+                        <img class="profile-size rad-50" src="./images/faces/face4.jpg" alt="">
+                        <div class="info">
+                            <p class="strong-blue-c fs-14 fw-400 line16 mb-5">George Morrison</p>
+                            <p class="default-c fs-14 fw-400 line16 mb-5">Sales dashboard have been created</p>
+                            <p class="default-c fs-10 fw-400 line16">8:30 am</p>
+                        </div>
+                    </div>
+                    <div class="notification d-flex gap-10 align-start">
+                        <img class="profile-size rad-50" src="./images/faces/face5.jpg" alt="">
+                        <div class="info">
+                            <p class="strong-blue-c fs-14 fw-400 line16 mb-5">Ryan Cortez</p>
+                            <p class="default-c fs-14 fw-400 line16 mb-5">Sales dashboard have been created</p>
+                            <p class="default-c fs-10 fw-400 line16">9:00 am</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="advanced-table bg-white p-20 rad-20 mb-30">
+                <h2 class="fs-20 title-c mb-30">Advanced Table</h2>
+                <table class="d-block">
+                    <thead class="d-block p-10 bg-violet rad-6">
+                        <tr class="d-flex align-c gap-10">
+                            <th class="white-c text-l" style="width: 14%">Quote#</th>
+                            <th class="white-c just-btw text-l" style="width: 14%">
+                                Product
+                                <span class="">
+                                    <i class="fa-solid fa-angle-up d-block grey-c pointer"></i>
+                                    <i class="fa-solid fa-angle-down d-block pointer"></i>
+                                </span>
+                            </th>
+                            <th class="white-c just-btw text-l" style="width: 14%">
+                                Buisiness type
+                                <span class="">
+                                    <i class="fa-solid fa-angle-up d-block grey-c pointer"></i>
+                                    <i class="fa-solid fa-angle-down d-block pointer"></i>
+                                </span>
+                            </th>
+                            <th class="white-c just-btw text-l" style="width: 14%">
+                                Policy holder
+                                <span class="">
+                                    <i class="fa-solid fa-angle-up d-block grey-c pointer"></i>
+                                    <i class="fa-solid fa-angle-down d-block pointer"></i>
+                                </span>
+                            </th>
+                            <th class="white-c just-btw text-l" style="width: 14%">
+                                Premium
+                                <span class="">
+                                    <i class="fa-solid fa-angle-up d-block grey-c pointer"></i>
+                                    <i class="fa-solid fa-angle-down d-block pointer"></i>
+                                </span>
+                            </th>
+                            <th class="white-c just-btw text-l" style="width: 14%">
+                                Status
+                                <span class="">
+                                    <i class="fa-solid fa-angle-up d-block grey-c pointer"></i>
+                                    <i class="fa-solid fa-angle-down d-block pointer"></i>
+                                </span>
+                            </th>
+                            <th class="white-c just-btw text-l" style="width: 14%">
+                                Update at
+                                <span class="">
+                                    <i class="fa-solid fa-angle-up d-block grey-c pointer"></i>
+                                    <i class="fa-solid fa-angle-down d-block pointer"></i>
+                                </span>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody class="d-block p-10">
+                        <tr class="d-flex align-c gap-10 p-relative mb-10 pt-10 pb-10">
+                            <td class="default-c d-flex align-c gap-10 text-l fs-14" style="width: 14%">
+                                <input type="checkbox">
+                                Incs234
+                            </td>
+                            <td class="default-c d-flex align-c gap-10 text-l fs-14" style="width: 14%">Car Insurance</td>
+                            <td class="default-c d-flex align-c gap-10 text-l fs-14" style="width: 14%">Buisiness type 1</td>
+                            <td class="default-c d-flex align-c gap-10 text-l fs-14" style="width: 14%">Jesse Thomas</td>
+                            <td class="default-c d-flex align-c gap-10 text-l fs-14" style="width: 14%">$1200</td>
+                            <td class="default-c d-flex align-c gap-10 text-l fs-14" style="width: 14%">In Progress</td>
+                            <td class="default-c d-flex align-c gap-10 text-l fs-14" style="width: 14%">25/04/2020</td>
+                            <td class="p-absolute icon pointer"><i class="fa-solid fa-angle-down grey-c"></i></td>
+                        </tr>
+                        <tr class="d-flex align-c gap-10 p-relative mb-10 pt-10 pb-10">
+                            <td class="default-c d-flex align-c gap-10 text-l fs-14" style="width: 14%">
+                                <input type="checkbox">
+                                Incs235
+                            </td>
+                            <td class="default-c d-flex align-c gap-10 text-l fs-14" style="width: 14%">Car Insurance</td>
+                            <td class="default-c d-flex align-c gap-10 text-l fs-14" style="width: 14%">Buisiness type 2</td>
+                            <td class="default-c d-flex align-c gap-10 text-l fs-14" style="width: 14%">Jesse Thomas</td>
+                            <td class="default-c d-flex align-c gap-10 text-l fs-14" style="width: 14%">$1200</td>
+                            <td class="default-c d-flex align-c gap-10 text-l fs-14" style="width: 14%">Active</td>
+                            <td class="default-c d-flex align-c gap-10 text-l fs-14" style="width: 14%">25/04/2020</td>
+                            <td class="p-absolute icon pointer"><i class="fa-solid fa-angle-down grey-c"></i></td>
+                        </tr>
+                        <tr class="d-flex align-c gap-10 p-relative mb-10 pt-10 pb-10">
+                            <td class="default-c d-flex align-c gap-10 text-l fs-14" style="width: 14%">
+                                <input type="checkbox">
+                                Incs236
+                            </td>
+                            <td class="default-c d-flex align-c gap-10 text-l fs-14" style="width: 14%">Car Insurance</td>
+                            <td class="default-c d-flex align-c gap-10 text-l fs-14" style="width: 14%">Buisiness type 3</td>
+                            <td class="default-c d-flex align-c gap-10 text-l fs-14" style="width: 14%">Jesse Thomas</td>
+                            <td class="default-c d-flex align-c gap-10 text-l fs-14" style="width: 14%">$1200</td>
+                            <td class="default-c d-flex align-c gap-10 text-l fs-14" style="width: 14%">expirde</td>
+                            <td class="default-c d-flex align-c gap-10 text-l fs-14" style="width: 14%">25/04/2020</td>
+                            <td class="p-absolute icon pointer"><i class="fa-solid fa-angle-down grey-c"></i></td>
+                        </tr>
+                        <tr class="d-flex align-c gap-10 p-relative mb-10 pt-10 pb-10">
+                            <td class="default-c d-flex align-c gap-10 text-l fs-14" style="width: 14%">
+                                <input type="checkbox">
+                                Incs234
+                            </td>
+                            <td class="default-c d-flex align-c gap-10 text-l fs-14" style="width: 14%">Car Insurance</td>
+                            <td class="default-c d-flex align-c gap-10 text-l fs-14" style="width: 14%">Buisiness type 1</td>
+                            <td class="default-c d-flex align-c gap-10 text-l fs-14" style="width: 14%">Jesse Thomas</td>
+                            <td class="default-c d-flex align-c gap-10 text-l fs-14" style="width: 14%">$1200</td>
+                            <td class="default-c d-flex align-c gap-10 text-l fs-14" style="width: 14%">In Progress</td>
+                            <td class="default-c d-flex align-c gap-10 text-l fs-14" style="width: 14%">25/04/2020</td>
+                            <td class="p-absolute icon pointer"><i class="fa-solid fa-angle-down grey-c"></i></td>
+                        </tr>
+                        <tr class="d-flex align-c gap-10 p-relative mb-10 pt-10 pb-10">
+                            <td class="default-c d-flex align-c gap-10 text-l fs-14" style="width: 14%">
+                                <input type="checkbox">
+                                Incs234
+                            </td>
+                            <td class="default-c d-flex align-c gap-10 text-l fs-14" style="width: 14%">Car Insurance</td>
+                            <td class="default-c d-flex align-c gap-10 text-l fs-14" style="width: 14%">Buisiness type 1</td>
+                            <td class="default-c d-flex align-c gap-10 text-l fs-14" style="width: 14%">Jesse Thomas</td>
+                            <td class="default-c d-flex align-c gap-10 text-l fs-14" style="width: 14%">$1200</td>
+                            <td class="default-c d-flex align-c gap-10 text-l fs-14" style="width: 14%">In Progress</td>
+                            <td class="default-c d-flex align-c gap-10 text-l fs-14" style="width: 14%">25/04/2020</td>
+                            <td class="p-absolute icon pointer"><i class="fa-solid fa-angle-down grey-c"></i></td>
+                        </tr>
+                        <tr class="d-flex align-c gap-10 p-relative mb-10 pt-10 pb-10">
+                            <td class="default-c d-flex align-c gap-10 text-l fs-14" style="width: 14%">
+                                <input type="checkbox">
+                                Incs234
+                            </td>
+                            <td class="default-c d-flex align-c gap-10 text-l fs-14" style="width: 14%">Car Insurance</td>
+                            <td class="default-c d-flex align-c gap-10 text-l fs-14" style="width: 14%">Buisiness type 1</td>
+                            <td class="default-c d-flex align-c gap-10 text-l fs-14" style="width: 14%">Jesse Thomas</td>
+                            <td class="default-c d-flex align-c gap-10 text-l fs-14" style="width: 14%">$1200</td>
+                            <td class="default-c d-flex align-c gap-10 text-l fs-14" style="width: 14%">In Progress</td>
+                            <td class="default-c d-flex align-c gap-10 text-l fs-14" style="width: 14%">25/04/2020</td>
+                            <td class="p-absolute icon pointer"><i class="fa-solid fa-angle-down grey-c"></i></td>
+                        </tr>
+                        <tr class="d-flex align-c gap-10 p-relative mb-10 pt-10 pb-10">
+                            <td class="default-c d-flex align-c gap-10 text-l fs-14" style="width: 14%">
+                                <input type="checkbox">
+                                Incs234
+                            </td>
+                            <td class="default-c d-flex align-c gap-10 text-l fs-14" style="width: 14%">Car Insurance</td>
+                            <td class="default-c d-flex align-c gap-10 text-l fs-14" style="width: 14%">Buisiness type 1</td>
+                            <td class="default-c d-flex align-c gap-10 text-l fs-14" style="width: 14%">Jesse Thomas</td>
+                            <td class="default-c d-flex align-c gap-10 text-l fs-14" style="width: 14%">$1200</td>
+                            <td class="default-c d-flex align-c gap-10 text-l fs-14" style="width: 14%">In Progress</td>
+                            <td class="default-c d-flex align-c gap-10 text-l fs-14" style="width: 14%">25/04/2020</td>
+                            <td class="p-absolute icon pointer"><i class="fa-solid fa-angle-down grey-c"></i></td>
+                        </tr>
+                        <tr class="d-flex align-c gap-10 p-relative mb-10 pt-10 pb-10">
+                            <td class="default-c d-flex align-c gap-10 text-l fs-14" style="width: 14%">
+                                <input type="checkbox">
+                                Incs234
+                            </td>
+                            <td class="default-c d-flex align-c gap-10 text-l fs-14" style="width: 14%">Car Insurance</td>
+                            <td class="default-c d-flex align-c gap-10 text-l fs-14" style="width: 14%">Buisiness type 1</td>
+                            <td class="default-c d-flex align-c gap-10 text-l fs-14" style="width: 14%">Jesse Thomas</td>
+                            <td class="default-c d-flex align-c gap-10 text-l fs-14" style="width: 14%">$1200</td>
+                            <td class="default-c d-flex align-c gap-10 text-l fs-14" style="width: 14%">In Progress</td>
+                            <td class="default-c d-flex align-c gap-10 text-l fs-14" style="width: 14%">25/04/2020</td>
+                            <td class="p-absolute icon pointer"><i class="fa-solid fa-angle-down grey-c"></i></td>
+                        </tr>
+                        <tr class="d-flex align-c gap-10 p-relative mb-10 pt-10 pb-10">
+                            <td class="default-c d-flex align-c gap-10 text-l fs-14" style="width: 14%">
+                                <input type="checkbox">
+                                Incs234
+                            </td>
+                            <td class="default-c d-flex align-c gap-10 text-l fs-14" style="width: 14%">Car Insurance</td>
+                            <td class="default-c d-flex align-c gap-10 text-l fs-14" style="width: 14%">Buisiness type 1</td>
+                            <td class="default-c d-flex align-c gap-10 text-l fs-14" style="width: 14%">Jesse Thomas</td>
+                            <td class="default-c d-flex align-c gap-10 text-l fs-14" style="width: 14%">$1200</td>
+                            <td class="default-c d-flex align-c gap-10 text-l fs-14" style="width: 14%">In Progress</td>
+                            <td class="default-c d-flex align-c gap-10 text-l fs-14" style="width: 14%">25/04/2020</td>
+                            <td class="p-absolute icon pointer"><i class="fa-solid fa-angle-down grey-c"></i></td>
+                        </tr>
+                        <tr class="d-flex align-c gap-10 p-relative pt-10 pb-10">
+                            <td class="default-c d-flex align-c gap-10 text-l fs-14" style="width: 14%">
+                                <input type="checkbox">
+                                Incs234
+                            </td>
+                            <td class="default-c d-flex align-c gap-10 text-l fs-14" style="width: 14%">Car Insurance</td>
+                            <td class="default-c d-flex align-c gap-10 text-l fs-14" style="width: 14%">Buisiness type 1</td>
+                            <td class="default-c d-flex align-c gap-10 text-l fs-14" style="width: 14%">Jesse Thomas</td>
+                            <td class="default-c d-flex align-c gap-10 text-l fs-14" style="width: 14%">$1200</td>
+                            <td class="default-c d-flex align-c gap-10 text-l fs-14" style="width: 14%">In Progress</td>
+                            <td class="default-c d-flex align-c gap-10 text-l fs-14" style="width: 14%">25/04/2020</td>
+                            <td class="p-absolute icon pointer"><i class="fa-solid fa-angle-down grey-c"></i></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <footer class="just-btw wrap">
+                <p class="fs-14 grey-c fw-400">Copyright © 2021. Premium <a class="blue-c fw-400" href="#"> Bootstrap admin template</a> from BootstrapDash. All rights reserved.</p>
+                <p class="fs-13 default-c">Hand-crafted & made with <i class="fa-regular fa-heart red-c"></i></p>
+            </footer>
+        </main>
+    </div>
+</body>
+</html>

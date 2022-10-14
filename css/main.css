@@ -1,0 +1,324 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700;800&display=swap');
+:root {
+    --violet-c: #4747A1;
+    --light-violet: #7978E9;
+    --aside-link-c: #6C7383;
+    --main-bg: #F5F7FF;
+    --default-c: #1F1F1F;
+    --title-c: #010101;
+    --blue-c: #7DA0FA;
+    --strong-blue-c: #248AFD;
+    --green-c: #57B657;
+    --red-c: #FF4747;
+    --soft-red: #F3797E;
+    --yellow-c: #FFC100;
+    --grey-c: #737F8B;
+    --border-c: #CED4DA;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ul {
+    list-style: none;
+    margin: 0;
+}
+a {
+    text-decoration: none;
+}
+table {
+    border-spacing: 0;
+}
+body {
+    font-family: 'Nunito', sans-serif;
+    background-color: var(--main-bg);
+}
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 111;
+    height: 80px;
+    box-shadow: 5px 5px 20px #cdd1e1;
+}
+@media (max-width: 1000px) {
+    header .logo .light-logo {
+        display: block !important;
+    }
+    header .menu {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 20px;
+    }
+    header .h-right {
+        margin-right: 40px;
+    }
+}
+header .logo .large-logo {
+    width: 120px;
+}
+header .logo .light-logo {
+    display: none;
+}
+header .h-right .icon::before {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: var(--violet-c);
+    top: -5px;
+    left: 7px;
+}
+/* start containerr rules */
+.container aside {
+    width: 250px;
+}
+@media (max-width: 1000px) {
+    .container aside {
+        width: fit-content;
+    }
+}
+.container aside li.active {
+    background-color: var(--violet-c);
+}
+.container aside li.active a {
+   color: white;
+}
+.container aside li:hover {
+    background-color: var(--violet-c);
+ }
+.container aside li:hover a {
+    color: white;
+}
+main {
+    overflow: hidden;
+}
+@media (max-width: 767px) {
+    main  .date {
+        justify-content: flex-end;
+    }
+}
+main .landing .image {
+    min-height: 300px;
+}
+main .landing .image .info {
+    top: 20px;
+    right: 20px;
+}
+
+main .landing  .boxes > div {
+    width: calc(50% - 20px);
+    
+}
+@media (max-width: 921px) {
+    main .landing {
+        flex-direction: column;
+    }
+    main .landing > div {
+        width: 100%;
+    }
+    main .landing  .boxes {
+        flex-direction: column;
+    }
+    main .landing  .boxes > div {
+        width: 100%;
+        
+    }
+}
+@media (max-width: 921px) {
+    .statistics {
+        flex-direction: column;
+    }
+}
+.statistics .sales-reports h2 a:hover {
+    text-decoration: underline;
+}
+.statistics .sales-reports .sales .keys span {
+    width: 30px;
+    height: 5px;
+}
+@media (max-width: 921px) {
+    .detailed-reports {
+        flex-direction: column;
+    }
+    .detailed-reports .left {
+        border-right: none !important;
+        padding-right: 0 !important;
+    }
+}
+.detailed-reports .left {
+    border-right: 1px solid #eee;
+}
+.detailed-reports .right .circle {
+    width: 200px;
+    height: 200px;
+    transform: rotate(45deg);
+    border-width: 25px;
+    border-style: solid;
+    margin: 20px auto;
+    border-color: var(--violet-c) var(--violet-c) var(--yellow-c) var(--blue-c);
+}
+.detailed-reports .right .circle span {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) rotate(-45deg);
+}
+.detailed-reports .details .holder span {
+    height: 12px;
+}
+.top-products {
+    overflow: hidden;
+}
+@media (max-width: 921px) {
+    .top-products {
+        flex-direction: column;
+    }
+}
+.top-products .products {
+    overflow-x: auto;
+}
+.top-products .products table {
+    overflow-x: auto;
+    border-spacing: 0;
+    min-width: 600px;
+}
+.top-products .todo .lists {
+    overflow-y: auto;
+    max-height: 350px;
+}
+.top-products .todo .item input[type="checkbox"] {
+    appearance: none;
+}
+.top-products .todo .item label::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 18px;
+    height: 18px;
+    border-radius: 2px;
+    border: 2px solid var(--violet-c);
+    transition: .3s;
+}
+.top-products .todo .item label::after {
+    content: "\f00c";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    position: absolute;
+    left: 4px;
+    top: 1px;
+    font-size: 16px;
+    color: white;
+}
+.top-products .todo .item input[type="checkbox"]:checked + .check-box label::before {
+    background-color: var(--violet-c);
+}
+.top-products .todo .item input[type="checkbox"]:checked + .check-box label span {
+    text-decoration: line-through var(--blue-c);
+}
+.top-products .todo .item input[type="checkbox"]:checked ~ .close {
+    color: var(--violet-c);
+}
+.top-products .todo .add-tem input::placeholder {
+    color: var(--grey-c);
+}
+@media (max-width: 921px) {
+    .projects {
+        flex-direction: column;
+    }
+}
+.projects .table-content {
+    overflow-x: auto;
+}
+.projects .table-content table {
+    min-width: 500px;
+    border-spacing: 0;
+}
+.projects .chart .meeting img {
+    top: 50%;
+    transform: translateY(-50%);
+    right: 20px;
+}
+.advanced-table {
+    overflow-x: auto;
+}
+.advanced-table table {
+    min-width: 1000px;
+}
+.advanced-table table tbody tr {
+    box-shadow: 0 10px 10px -10px #eee, 0 -10px 10px -10px #eee;
+}
+.advanced-table table tbody tr .icon {
+    top: 50%;
+    transform: translateY(-50%);
+    right: 15px;
+}
+/* start UI elements page */
+@media (max-width: 921px) {
+    .forms {
+        flex-direction: column;
+    }
+}
+.forms .default-form .check-box input[type="checkbox"],
+.forms .historic-form .check-box input[type="checkbox"] {
+    appearance: none;
+}
+.forms .default-form .check-box::before,
+.forms .historic-form .check-box::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 18px;
+    height: 18px;
+    border-radius: 2px;
+    border: 2px solid var(--violet-c);
+    transition: .3s;
+}
+.forms .default-form .check-box::after,
+.forms .historic-form .check-box::after {
+    content: "\f00c";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    position: absolute;
+    left: 4px;
+    top: 1px;
+    font-size: 16px;
+    color: white;
+}
+.forms .default-form .check-box:has(input[type="checkbox"]:checked)::before,
+.forms .historic-form .check-box:has(input[type="checkbox"]:checked)::before {
+    background-color: var(--violet-c);
+}
+.buttons-container .submit:hover {
+    background-color: #3f3e91;
+}
+.buttons-container .reset:hover {
+    background-color: #dae0e5
+}
+select:focus {
+    color: var(--default-c);
+}
+.basic-form-elements textarea {
+    height: 100px;
+    resize: none;
+}
+@media (max-width: 921px) {
+    .size-container {
+        flex-direction: column;
+    }
+}
+@media (max-width: 921px) {
+    footer {
+        text-align: center;
+        gap: 10px;
+        justify-content: center !important;
+    }
+}
+/* end container rules */
